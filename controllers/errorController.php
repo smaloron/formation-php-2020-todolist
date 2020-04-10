@@ -1,3 +1,6 @@
 <?php
 
-echo $errorMessage;
+$pageTitle = "Erreur";
+$content = "error";
+
+require "../views/baseLayout.php";
