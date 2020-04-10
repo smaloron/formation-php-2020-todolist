@@ -1,5 +1,15 @@
 <h2>Nouvelle tâche</h2>
 
+<?php if (count($errors) > 0): ?>
+    <div class="alert alert-danger">
+        <ul>
+            <?php foreach($errors as $message): ?>
+                <li><?= $message ?></li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+<?php endif ?>
+
 <form method="post">
     <div class="form-group">
         <label>Titre</label>

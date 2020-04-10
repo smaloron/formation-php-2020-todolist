@@ -27,11 +27,9 @@ CREATE TABLE tasks (
     id INT UNSIGNED AUTO_INCREMENT,
     title VARCHAR(50) NOT NULL,
     due_date DATE,
-    completion_rate TINYINT UNSIGNED NOT NULL 
-        DEFAULT 0,
+    completion_rate TINYINT UNSIGNED NOT NULL DEFAULT 0,
     category_id TINYINT UNSIGNED NOT NULL,
-    status_id TINYINT UNSIGNED NOT NULL 
-        DEFAULT 1,
+    status_id TINYINT UNSIGNED NOT NULL DEFAULT 1,
     PRIMARY KEY (id),
     CONSTRAINT categories_to_tasks
         FOREIGN KEY (category_id)
@@ -51,9 +49,9 @@ INSERT INTO task_status (status_name) VALUES
 
 -- Insertion de tâches
 INSERT INTO tasks (title, due_date, completion_rate, category_id)
-VALUES
-('Acheter du lait', '2020-4-11', 0, 1),
-('Faire des pompes', NULL, 0, 4);
+    VALUES
+        ('Acheter du lait', '2020-4-11', 0, 1),
+        ('Faire des pompes', NULL, 0, 4);
 
 -- Création d'une vue pour faciliter les requêtes dans l'application php
 CREATE OR REPLACE VIEW view_tasks AS
