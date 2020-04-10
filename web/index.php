@@ -12,7 +12,7 @@ if(! file_exists($controllerPath)){
     $controllerPath = "../controllers/errorController.php";
 }
 
-//Ouverture de le connexion à la base de données
+//Ouverture de la connexion à la base de données
 $pdo = new PDO(
     "mysql:host=127.0.0.1;dbname=todolist;charset=utf8",
     "root",
